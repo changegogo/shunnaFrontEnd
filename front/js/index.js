@@ -39,21 +39,34 @@ timer = setInterval(function(){
         // $('.carousellist a').eq(index).show().siblings().hide(); /*2017-12-25*/
     }
 //下拉
-    var h=$('.img img').eq(0).height();
-    $('.img').css("height",(h*4)+"px");
+    var h=$('.img img').eq(0).height()*4;
+    $('.img').css("height",h+"px");
  $(".cli").click(function () {
-     if($('.img a').length<=4){
-     alert("没有更多数据")
-     }else {
-         var  h1=h*($('.img a').length-4);
-     }
+     var num=$('.img a').length
+     var tt
+     alert(num)
+     if(num<=4){
+         alert("没有更多数据")
+     }if(4<num&&num<8){
+         $('.img').append( $('.img a:lt(4)').clone(true))
+         $('.img a').animate({top:"-"+h+"px"},3000)
+         tt=setTimeout(function () {
+             alert("aaa")
+             $('.img').append($('.img a:lt(4)'));
+             $('.img a').css("top",0);
+             alert("bbb")
 
-     $('.img a').animate({top:"-"+h1+"px"},3000)
-     var t=setTimeout(function () {
-         $('.img').append($('.img a:lt(4)'));
-         alert($('.img a').length)
-         $('.img a').css("top",0);
-     },3000)
+         },3000)
+     }else if(num>=8){
+         $('.img a').animate({top:"-"+h+"px"},3000)
+          tt=setTimeout(function () {
+              alert("aaa")
+             $('.img').append($('.img a:lt(4)'));
+             $('.img a').css("top",0);
+              alert("bbb")
+
+         },3000)
+     }
 
 
  })

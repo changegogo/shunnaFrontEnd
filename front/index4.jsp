@@ -225,7 +225,8 @@
                         <img src="${pageContext.request.contextPath }/front/img/listbg.png">   <!--　306*31-->
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=6&currentPage=1">专题活动</a>
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=6&currentPage=1">更多>>></a>
-                        <div class="list lastlist" style="position: relative">
+                        <div class="list lastlist">
+                        <%--<div class="list lastlist" style="position: relative">--%>
                             <div class="img"> <!--287*69-->
                             	<c:forEach items="${zthdList }" var="news">
                             		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
