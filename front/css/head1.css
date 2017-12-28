@@ -1,0 +1,86 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-size:14px; font-family:Microsoft YaHei,sans-serif;
+}
+.container-fluid{ /*2017-12-26*/
+     padding-right: 0px;
+     padding-left: 0px;
+     margin-right: 0;
+     margin-left: 0;
+}
+.row{                  /*2017-12-26*/
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.row>div{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.head img{
+    width: 100%;
+}
+.nav{
+    height:50px; /*2017-12-25*/
+}
+.nav div{
+    position: relative;
+    width: 73%;
+    margin: 0 auto;
+    bottom: 50px;  /*2017-12-25*/
+}
+.nav > div > ul {
+    padding: 0;
+    width: 100%;
+    margin-left: -7px;
+    margin-top: -6px;
+   }
+.nav >div> ul>li{
+    list-style: none;
+    float: left;
+    width:11.1% ;
+    padding:0;
+    }
+
+.nav>div>ul>li>a{
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    display:block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 38px; /*2017-12-25*/
+    height: 38px;    /*2017-12-25*/
+}
+.nav >div> ul>.date1{/*2017-12-26*/
+    color: white;
+    width: 17%;
+    line-height: 38px;
+    height: 38px;
+    text-align: right;
+}
+.nav >div> ul>.weather{ /*2017-12-26*/
+    line-height: 38px;
+    height: 38px;
+    color: white;
+    width: 16.3%;
+    text-align: center;
+}
+#stars_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100001;
+    /*border:1px solid black;*/
+}
+#stars_box{
+    width:50%;
+    height: 150px;
+    overflow: hidden;
+}
