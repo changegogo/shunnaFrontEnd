@@ -37,7 +37,8 @@
     padding: 0px 3px;
     padding-top: 3px;
     background: white;
-   box-shadow: 5px 5px 5px #888888;
+    box-shadow: 2px 2px 8px #888888;
+
 }
 .itemsCon img {
     width: 95%;
@@ -127,17 +128,44 @@
     right: 17px;
 }
 
-@media screen and (max-width:1366px) {
+@media screen and (max-width:1370px) {
     .itemsCon>div:nth-child(2)>ul>li{
         height: 30px;
         line-height: 30px;
     }
+    .img{
+        height: 215px;
+    }
+    .secondRow .list{
+        height: 265px;
+    }
+
 }
-@media screen and (min-width:1367px){
+@media screen and (min-width:1371px){
     .itemsCon>div:nth-child(2)>ul>li{
         height: 32px;
         line-height: 32px;
     }
+    .img{
+        height: 250px;
+    }
+    .secondRow .list{
+        height: 300px;
+    }
+
+}
+@media screen and (min-width:1610px) and (max-width: 2000px){
+    .itemsCon>div:nth-child(2)>ul>li{
+        height: 32px;
+        line-height: 32px;
+    }
+    .img{
+        height: 300px;
+    }
+    .secondRow .list{
+        height: 350px;
+    }
+
 }
 /*公告栏*/
 .itemsCon>div:nth-child(3) img{
@@ -183,12 +211,24 @@
     right:8px;
     top:3px;
 }
+.sol{
+    box-shadow: 2px 2px 8px #888888;
+}
 .secondRow .list{
-    height: 500px;
+    /*height: 300px;*/
     width: 95%;
     background: white;
-    box-shadow: 5px 5px 5px #888888;
+    box-shadow: 2px 2px 8px #888888;
+    overflow: auto;
+    width: -webkit-calc(100% + 17px);
+    width: -moz-calc(100% + 17px);
+    width: calc(100% + 17px);
+    overflow-y: auto;
 }
+.secondRow .list::-webkit-scrollbar {
+    display: none;
+}
+
 .secondRow .list ul {
     padding: 5px;
 }
@@ -215,18 +255,15 @@
     color: #888888;
     font-size: small;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top:0;
 }
-
-
-
 
 .secondRow .lasta1 img{
     width: 100%;
 }
 .secondRow  .lastlist{
-    height:600px;
+    /*height:600px;*/
     width: 100%;
     text-align: center;
  }
@@ -235,28 +272,20 @@
     height: 35px;
     text-align: center;
     line-height: 35px;
-    border:1px solid black;
+    /*border:1px solid black;*/
 
 }
 .secondRow .down .cli{
-    font-size: 20px;
-    font-family: "FZCYFW";
-    font-weight: bold;
-    color: #888888;
-    display: inline-block;
-    transform:rotate(90deg);
-    -ms-transform:rotate(90deg); 	/* IE 9 */
-    -moz-transform:rotate(90deg); 	/* Firefox */
-    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
-    -o-transform:rotate(90deg); 	/* Opera */
+    font-size: 25px;
 }
 .img{
-    /*overflow: hidden;*/
-    border:1px solid black;
+    /*height: 250px;*/
+    overflow: hidden;
+    /*border:1px solid black;*/
 }
 .img a{
     position: relative;
-    border:1px solid red;
+    /*border:1px solid red;*/
     display: block;
 }
 

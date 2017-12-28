@@ -16,6 +16,7 @@
     <link href="${pageContext.request.contextPath }/front/css/idangerous.swiper2.7.6.css" rel="stylesheet" media="screen">
     <link href="${pageContext.request.contextPath }/front/css/head1.css" rel="stylesheet" >
     <link href="${pageContext.request.contextPath }/front/css/index1.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/front/css/iconfont.css" rel="stylesheet">
        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,7 +51,9 @@
                         <c:forEach items="${navList }" var="nav">
 					    	<li><a href="${pageContext.request.contextPath }/${nav.jumpLink }">${nav.name }</a></li>
 					   	</c:forEach>
-					   	<li class='date1'>${date }&nbsp;&nbsp;${day}</li><li class='weather' id="weather">泸州&nbsp;&nbsp;小雨&nbsp;&nbsp;22℃-33℃</li>
+					   	<li class='date1'>${date }&nbsp;&nbsp;${day}</li><li class='weather' id="weather">
+    <iframe id='ww'allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=000000&f=ffffff&ltf=ffffff&htf=ffffff&q=1&e=1&a=0&c=57602&w=180&h=36&align=center"></iframe>
+                         </li>
                     </ul>
                     </div>
                 </div>
@@ -156,6 +159,7 @@
                             <img src="${pageContext.request.contextPath }/front/img/listbg.png"> <!--　306*31-->
                             <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=3&currentPage=1">文件通知</a>
                             <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=3&currentPage=1">更多>>></a>
+    <div class="sol" style="overflow:hidden;width:95%">
                         <div class="list">
                             <ul>
 	                           <c:forEach items="${wjtzList }" var="news">
@@ -173,13 +177,15 @@
 		                        </c:forEach>
                             </ul>
                         </div>
+    </div>
                     </div><!--文件通知-->
                     <!--团青快讯-->
                     <div class="col-md-3  col-sm-3 col-xs-3 a1">
                         <img src="${pageContext.request.contextPath }/front/img/listbg.png">  <!--　306*31-->
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=4&currentPage=1">团青快讯</a>
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=4&currentPage=1">更多>>></a>
-                        <div class="list">
+       <div class="sol" style="overflow:hidden;width:95%">
+    <div class="list">
                             <ul>
                             	<c:forEach items="${tqkxList }" var="news">
 		                         	<li>
@@ -196,12 +202,14 @@
 		                        </c:forEach>
                             </ul>
                         </div>
+    </div>
                     </div><!--团青快讯-->
                     <!--蜀南青语-->
                     <div class="col-md-3  col-sm-3 col-xs-3 a1">
                         <img src="${pageContext.request.contextPath }/front/img/listbg.png">  <!--　306*31-->
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=5&currentPage=1">蜀南青语</a>
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=5&currentPage=1">更多>>></a>
+    <div class="sol" style="overflow:hidden;width:95%">
                         <div class="list">
                             <ul>
                                 <c:forEach items="${snqyList }" var="news">
@@ -219,6 +227,7 @@
 		                        </c:forEach>
                             </ul>
                         </div>
+    </div>
                     </div><!--蜀南青语-->
                     <!--专题活动-->
                     <div class="col-md-3  col-sm-3 col-xs-3 a1 lasta1">
@@ -236,7 +245,7 @@
                             </div>
                             <!--向下箭头-->
                             <div class="down" style="position: absolute;bottom: 0">
-                               <span class="cli">>>></span>
+                               <span class="cli iconfont icon-down-darrow"></span>
                             </div>
                         </div>
                     </div><!--专题活动-->
@@ -260,6 +269,7 @@
 	                                <div class="thumbnail">
 	                                    <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
 	                                    	<img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="...">
+	                                    </a>
 	                                    </a>
 	                                    <div class="caption">
 	                                        <p>
@@ -304,7 +314,7 @@
 <script src="${pageContext.request.contextPath }/front/js/jquery-3.2.1.min.js"></script>
 <script src="${pageContext.request.contextPath }/front/js/nav.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="${pageContext.request.contextPath }/front/js/idangerous.swiper2.7.6.min.js"></script>
+<script src="${pageContext.request.contextPath }/front/js/idangerous.swiper2.7.6.js"></script>
 <script src="${pageContext.request.contextPath }/front/js/index.js"></script>
 <!--<script src="js/animate.js"></script>-->
 

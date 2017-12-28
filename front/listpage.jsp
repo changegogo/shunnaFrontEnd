@@ -16,6 +16,7 @@
     <link href="${pageContext.request.contextPath }/front/css/bootstrap.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath }/front/css/head1.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath }/front/css/listpage1.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/front/css/iconfont.css" rel="stylesheet">
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -68,7 +69,7 @@
                     </div>  <!--　1201*289-->
                 </div> <!--banner-->
                 <div class="breadnav">
-                    <span>您的位置：<a href="#">首页</a>>><span>${newsTypeName }</span></span>
+                    <span>您的位置：<a href="#">首页</a><span class="iconfont icon-icon-copy"></span><span>${newsTypeName }</span></span>
                 </div>
                <!--主要内容 -->
                 <div class="col-md-12 concent">

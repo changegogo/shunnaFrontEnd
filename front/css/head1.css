@@ -57,7 +57,7 @@ body{
 }
 .nav >div> ul>.date1{/*2017-12-26*/
     color: white;
-    width: 17%;
+    width: 16.3%;
     line-height: 38px;
     height: 38px;
     text-align: right;
@@ -66,8 +66,9 @@ body{
     line-height: 38px;
     height: 38px;
     color: white;
-    width: 16.3%;
+    width: 17%;
     text-align: center;
+    text-decoration: none;
 }
 #stars_box{
     position: absolute;

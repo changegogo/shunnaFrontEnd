@@ -40,24 +40,7 @@ function setwidth() {
 }
 
 //天气预报
-var url1='http://20.14.3.85:8080/committeewb/weather';
-$.ajax({
-    type:'get',
-    url:url1,
-    async:true,
-    dataType: 'JSON',
-    success:function(data){
-        var place=data.weatherinfo.city;
-        var maxTemp=data.weatherinfo.temp1;
-        var minTemp=data.weatherinfo.temp2;
-        var todayWeather=data.weatherinfo.weather
-       $("#weather").html(place+"&nbsp;&nbsp;"+todayWeather+"&nbsp;&nbsp;"+maxTemp+"-"+minTemp)
-        console.log(data)
-    },
-    error:function (err) {
-        console.log(err)
-    }
-})
+document.frames["ww"].document.styleSheets.mycss.addRule("P","color:green");
 ////星光
 //星光
 var stars_box=document.getElementById('stars_box');  //获取id为star_box的元素

@@ -39,34 +39,26 @@ timer = setInterval(function(){
         // $('.carousellist a').eq(index).show().siblings().hide(); /*2017-12-25*/
     }
 //下拉
-    var h=$('.img img').eq(0).height()*4;
-    $('.img').css("height",h+"px");
- $(".cli").click(function () {
+ $(".down").click(function () {
+     var h=$('.img img').eq(0).height()*4;
+     $('.img').css("height",h+"px");
      var num=$('.img a').length
+     // alert(num)
      var tt
-     alert(num)
      if(num<=4){
          alert("没有更多数据")
      }if(4<num&&num<8){
-         $('.img').append( $('.img a:lt(4)').clone(true))
-         $('.img a').animate({top:"-"+h+"px"},3000)
-         tt=setTimeout(function () {
-             alert("aaa")
-             $('.img').append($('.img a:lt(4)'));
-             $('.img a').css("top",0);
-             alert("bbb")
 
-         },3000)
+         $('.img').append( $('.img a:lt('+(8-num)+')').clone(true))
+         $('.img a').animate({top:"-"+h+"px"},3000)
      }else if(num>=8){
          $('.img a').animate({top:"-"+h+"px"},3000)
-          tt=setTimeout(function () {
-              alert("aaa")
+     }
+     tt=setTimeout(function () {
              $('.img').append($('.img a:lt(4)'));
              $('.img a').css("top",0);
-              alert("bbb")
 
-         },3000)
-     }
+         },3100)
 
 
  })
@@ -74,11 +66,14 @@ timer = setInterval(function(){
 ///横向滚动
 var mySwiper = new Swiper ('.swiper-container', {
 //    autoHeight:true,
+    direction:"horizontal",
     loop : true,
     speed:2000,
-    autoplay:1,
+    autoplay:true,
     slidesPerView : 5,
+    loopedSlides :100,
     spaceBetween :5,
+    slidesPerGroup : 1,
     freeMode :true,
     freeModeMomentum : false,
     freeModeSticky : false,
