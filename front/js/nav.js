@@ -40,7 +40,8 @@ function setwidth() {
 }
 
 //天气预报
-document.frames["ww"].document.styleSheets.mycss.addRule("P","color:green");
+console.log($("#ww"))
+document.getElementById('ww').contentWindow.document.body.style.backgroundColor="#000";
 ////星光
 //星光
 var stars_box=document.getElementById('stars_box');  //获取id为star_box的元素

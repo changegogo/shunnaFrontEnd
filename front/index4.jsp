@@ -52,7 +52,7 @@
 					    	<li><a href="${pageContext.request.contextPath }/${nav.jumpLink }">${nav.name }</a></li>
 					   	</c:forEach>
 					   	<li class='date1'>${date }&nbsp;&nbsp;${day}</li><li class='weather' id="weather">
-    <iframe id='ww'allowtransparency="true" frameborder="0" width="180" height="36" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=000000&f=ffffff&ltf=ffffff&htf=ffffff&q=1&e=1&a=0&c=57602&w=180&h=36&align=center"></iframe>
+    <iframe id='ww'allowtransparency="true" frameborder="0" width="180"  scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=2&t=0&v=0&d=3&bd=0&k=000000&f=ffffff&ltf=ffffff&htf=ffffff&q=1&e=1&a=0&c=57602&w=180&h=36&align=center"></iframe>
                          </li>
                     </ul>
                     </div>
@@ -259,38 +259,92 @@
                         <a href="${pageContext.request.contextPath }/news/newsList?newsTypeID=7&currentPage=1">更多>>></a>
                     </div>
                 </div>
-                <div class="row thirdRow" >
-                    <div><img src="${pageContext.request.contextPath }/front/img/left.png" style="width: 100%"></div>
-                    <div class="col-md-11 col-sm-11 col-xs-11 a1" style="float: left">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                        	<c:forEach items="${qcjyList }" var="news">
-	                        	<div class="swiper-slide">
-	                                <div class="thumbnail">
-	                                    <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
-	                                    	<img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="...">
-	                                    </a>
-	                                    </a>
-	                                    <div class="caption">
-	                                        <p>
-	                                        	<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
-			                                        <c:if test="${fn:length(news.title)>10 }">
-				                         				${fn:substring(news.title, 0, 10) }...
-				                         			</c:if>
-				                         			<c:if test="${fn:length(news.title)<10 }">
-				                         				${news.title }
-				                         			</c:if>
-	                                        	</a>
-	                                        </p>
-	                                    </div>
-	                                </div>
-	                            </div>
-                        	</c:forEach>
-                        </div>
-                    </div>
-                    </div>
-                    <div style="width:4.15%; float: left"><img src="${pageContext.request.contextPath }/front/img/right.png" style="width: 100%"></div>
-                </div><!--青春剪影-->
+
+    <div class="row thirdRow" >
+    <div><img src="${pageContext.request.contextPath }/front/img/left.png" style="width: 100%"></div>
+    <div class="col-md-11 col-sm-11 col-xs-11 a1" style="float: left">
+    <div id="scroll_div" class="scroll_div">
+    <div id="scroll_begin" style="width: 100%;">
+    <ul>
+    <c:forEach items="${qcjyList }" var="news">
+        <li>
+        <div class="thumbnail">
+        <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+        <img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="...">
+        </a>
+        <div class="caption">
+        <p>
+        <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+        <c:if test="${fn:length(news.title)>10 }">
+            ${fn:substring(news.title, 0, 10) }...
+        </c:if>
+        <c:if test="${fn:length(news.title)<10 }">
+            ${news.title }
+        </c:if>
+        </a>
+        </p>
+        </div>
+        </div>
+        </li>
+    </c:forEach>
+    </ul>
+    </div>
+    <div id="scroll_end" style="width: 100%;margin-left: 20px"></div>
+    </div>
+    </div>
+
+
+
+
+
+    <div style="width:4.15%; float: left"><img src="${pageContext.request.contextPath }/front/img/right.png" style="width: 100%"></div>
+
+
+
+
+    </div>
+
+
+
+    <!--青春剪影-->
+
+
+
+
+
+
+                <%--<div class="row thirdRow" >--%>
+                    <%--<div><img src="${pageContext.request.contextPath }/front/img/left.png" style="width: 100%"></div>--%>
+                    <%--<div class="col-md-11 col-sm-11 col-xs-11 a1" style="float: left">--%>
+                    <%--<div class="swiper-container">--%>
+                        <%--<div class="swiper-wrapper">--%>
+                        	<%--<c:forEach items="${qcjyList }" var="news">--%>
+	                        	<%--<div class="swiper-slide">--%>
+	                                <%--<div class="thumbnail">--%>
+	                                    <%--<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">--%>
+	                                    	<%--<img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="...">--%>
+	                                    <%--</a>--%>
+	                                    <%--</a>--%>
+	                                    <%--<div class="caption">--%>
+	                                        <%--<p>--%>
+	                                        	<%--<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">--%>
+			                                        <%--<c:if test="${fn:length(news.title)>10 }">--%>
+				                         				<%--${fn:substring(news.title, 0, 10) }...--%>
+				                         			<%--</c:if>--%>
+				                         			<%--<c:if test="${fn:length(news.title)<10 }">--%>
+				                         				<%--${news.title }--%>
+				                         			<%--</c:if>--%>
+	                                        	<%--</a>--%>
+	                                        <%--</p>--%>
+	                                    <%--</div>--%>
+	                                <%--</div>--%>
+	                            <%--</div>--%>
+                        	<%--</c:forEach>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div style="width:4.15%; float: left"><img src="${pageContext.request.contextPath }/front/img/right.png" style="width: 100%"></div>--%>
+                <%--</div><!--青春剪影-->--%>
                 <!--小banner-->
                 <div class="row footer">
                 <c:forEach items="${linksList }" var="banner">

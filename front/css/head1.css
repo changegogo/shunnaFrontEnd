@@ -59,16 +59,20 @@ body{
     color: white;
     width: 16.3%;
     line-height: 38px;
-    height: 38px;
+    height: 50px;
     text-align: right;
 }
 .nav >div> ul>.weather{ /*2017-12-26*/
-    line-height: 38px;
-    height: 38px;
+    line-height: 50px;
+    height: 50px;
     color: white;
     width: 17%;
     text-align: center;
     text-decoration: none;
+  }
+#weather{
+    line-height: 50px;
+    margin-top: 5px;
 }
 #stars_box{
     position: absolute;

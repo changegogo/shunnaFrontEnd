@@ -64,34 +64,74 @@ timer = setInterval(function(){
  })
 
 ///横向滚动
-var mySwiper = new Swiper ('.swiper-container', {
-//    autoHeight:true,
-    direction:"horizontal",
-    loop : true,
-    speed:2000,
-    autoplay:true,
-    slidesPerView : 5,
-    loopedSlides :100,
-    spaceBetween :5,
-    slidesPerGroup : 1,
-    freeMode :true,
-    freeModeMomentum : false,
-    freeModeSticky : false,
+// var mySwiper = new Swiper ('.swiper-container', {
+// //    autoHeight:true,
+//     direction:"horizontal",
+//     loop : true,
+//     speed:2000,
+//     autoplay:true,
+//     slidesPerView : 5,
+//     loopedSlides :5,
+//     spaceBetween :5,
+//     slidesPerGroup : 1,
+//     freeMode :true,
+//     freeModeMomentum : false,
+//     freeModeSticky : false,
+//
+// })
+// $('.swiper-container').mouseover(function(){
+//     mySwiper.stopAutoplay();
+// })
+// $('.swiper-slide').mouseover(function(){
+//     mySwiper.stopAutoplay();
+//     $('.swiper-slide a').css({"color":"#333"})
+//     $('.swiper-slide img').css({"border":"4px solid transparent"})
+//     $(this).find('img').css({"border":"4px solid #D7AD4B"})
+//     $(this).find('a').css({"color":"red"})
+//
+// })
+// $('.swiper-slide').mouseout(function(){
+//     mySwiper.startAutoplay();
+//     $('.swiper-slide a').css({"color":"#333"})
+//     $('.swiper-slide img').css({"border":"4px solid transparent"})
+// })
+//
 
-})
-$('.swiper-container').mouseover(function(){
-    mySwiper.stopAutoplay();
-})
-$('.swiper-slide').mouseover(function(){
-    mySwiper.stopAutoplay();
-    $('.swiper-slide a').css({"color":"#333"})
-    $('.swiper-slide img').css({"border":"4px solid transparent"})
-    $(this).find('img').css({"border":"4px solid #D7AD4B"})
-    $(this).find('a').css({"color":"red"})
 
-})
-$('.swiper-slide').mouseout(function(){
-    mySwiper.startAutoplay();
-    $('.swiper-slide a').css({"color":"#333"})
-    $('.swiper-slide img').css({"border":"4px solid transparent"})
-})
+
+//横向
+
+ScrollImgLeft();
+function ScrollImgLeft(){
+    var speed=3;
+    var scroll_begin = document.getElementById("scroll_begin");
+    var scroll_end = document.getElementById("scroll_end");
+    var scroll_div = document.getElementById("scroll_div");
+    scroll_end.innerHTML=scroll_begin.innerHTML;
+    function Marquee(){
+        if(scroll_end.offsetWidth-scroll_div.scrollLeft<=0)
+        {
+            scroll_div.scrollLeft-=scroll_begin.offsetWidth;
+        }
+        else
+        {
+            scroll_div.scrollLeft++;
+        }
+    }
+    var MyMar=setInterval(Marquee,speed);
+    $('.scroll_div li').mouseover(function()
+    {
+        clearInterval(MyMar);
+        $('.thumbnail a').css({"color":"#333"})
+        $('.thumbnail img').css({"border":"4px solid transparent"})
+        $(this).find('img').css({"border":"4px solid #D7AD4B"})
+        $(this).find('a').css({"color":"red"})
+    })
+    $('.scroll_div li').mouseout(function()
+    {
+
+        $('.thumbnail a').css({"color":"#333"})
+        $('.thumbnail img').css({"border":"4px solid transparent"})
+        MyMar=setInterval(Marquee,speed);
+    })
+}
