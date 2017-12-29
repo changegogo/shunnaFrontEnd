@@ -68,7 +68,14 @@
                 <div class="row banner">
                 <div class="col-md-12 col-sm-12 col-xs-12 ">
                 	<c:forEach items="${bannerList }" var="banner">
-                    	<img src="${pageContext.request.contextPath }/upload/${banner.picUrl}"/>
+	                	<c:if test="${banner.jumpLink!=null && banner.jumpLink!=''}">
+	                		<a href="${banner.jumpLink}">
+	                			<img src="${pageContext.request.contextPath }/upload/${banner.picUrl}"/>
+	                		</a>
+	                	</c:if>
+	                	<c:if test="${banner.jumpLink==null || banner.jumpLink==''}">
+	                		<img src="${pageContext.request.contextPath }/upload/${banner.picUrl}"/>
+	                	</c:if>
 				    </c:forEach>
                 </div>  <!--　1201*289-->
                 </div> <!--banner-->
@@ -118,7 +125,7 @@
                         <ul>
 	                         <c:forEach items="${zdzzList }" var="news">
 	                         	<li>
-	                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+	                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
 	                         			<c:if test="${fn:length(news.title)>20 }">
 	                         				${fn:substring(news.title, 0, 20) }...
 	                         			</c:if>
@@ -136,7 +143,7 @@
                         <ul>
                             <c:forEach items="${ggList }" var="news">
 	                         	<li>
-	                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+	                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
 	                         			<c:if test="${fn:length(news.title)>23 }">
 	                         				${fn:substring(news.title, 0, 23) }...
 	                         			</c:if>
@@ -164,7 +171,7 @@
                             <ul>
 	                           <c:forEach items="${wjtzList }" var="news">
 		                         	<li>
-		                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+		                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
 		                         			<c:if test="${fn:length(news.title)>10 }">
 		                         				${fn:substring(news.title, 0, 10) }...
 		                         			</c:if>
@@ -189,7 +196,7 @@
                             <ul>
                             	<c:forEach items="${tqkxList }" var="news">
 		                         	<li>
-		                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+		                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
 		                         			<c:if test="${fn:length(news.title)>10 }">
 		                         				${fn:substring(news.title, 0, 10) }...
 		                         			</c:if>
@@ -214,7 +221,7 @@
                             <ul>
                                 <c:forEach items="${snqyList }" var="news">
 		                         	<li>
-		                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+		                         		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
 		                         			<c:if test="${fn:length(news.title)>10 }">
 		                         				${fn:substring(news.title, 0, 10) }...
 		                         			</c:if>
@@ -238,7 +245,7 @@
                         <%--<div class="list lastlist" style="position: relative">--%>
                             <div class="img"> <!--287*69-->
                             	<c:forEach items="${zthdList }" var="news">
-                            		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+                            		<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
                             			<img src="${pageContext.request.contextPath }/upload/${news.picUrl}">  
                             		</a>
                             	</c:forEach>
@@ -269,12 +276,12 @@
     <c:forEach items="${qcjyList }" var="news">
         <li>
         <div class="thumbnail">
-        <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+        <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
         <img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="...">
         </a>
         <div class="caption">
         <p>
-        <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
+        <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" target="_blank">
         <c:if test="${fn:length(news.title)>10 }">
             ${fn:substring(news.title, 0, 10) }...
         </c:if>
@@ -289,7 +296,7 @@
     </c:forEach>
     </ul>
     </div>
-    <div id="scroll_end" style="width: 100%;margin-left: 20px"></div>
+    <div id="scroll_end" style="width: 100%;"></div>
     </div>
     </div>
 

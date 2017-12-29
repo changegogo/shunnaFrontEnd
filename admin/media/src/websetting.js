@@ -375,9 +375,7 @@ var WebSetting = function () {
 	                    type: 'text',
 	                    title: '链接',
 	                    mode: 'inline',
-	                    validate: function (v) {
-	                        if (!v) return '不能为空';
-	                    }
+	                    
 	                }
 				}],
 				onEditableSave: function(field, row, oldValue, $el){
