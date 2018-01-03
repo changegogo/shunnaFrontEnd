@@ -116,10 +116,11 @@
                             <ul id="slideName1" class="sildebar clearfix">
                             	<c:forEach items="${rollImgList }" var="news">
 	                           		<li>
-	                           			<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
-	                           				<img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="${news.title }">
-	                           			</a>
-	                                   <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" style="line-height: 2em">
+	                           			<%--<a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">--%>
+	                           				<%--<img src="${pageContext.request.contextPath }/upload/${news.picUrl}" alt="${news.title }">--%>
+	                           			<%--</a>--%>
+                                    <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query" style="background:url('${pageContext.request.contextPath }/upload/${news.picUrl}') no-repeat center center;background-size: cover;" title="${news.title }"> </a>
+	                                   <a href="${pageContext.request.contextPath }/news/${news.newsTypeID }/${news.id }/query">
 		                                   	<c:if test="${fn:length(news.title)>23 }">
 		                         				${fn:substring(news.title, 0, 23) }...
 		                         			</c:if>
@@ -133,7 +134,7 @@
                         </div>
                        </div> <!--轮播图 -->
                     <!--重点专注-->
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 b1">
                         <ul>
 	                         <c:forEach items="${zdzzList }" var="news">
 	                         	<li>
@@ -146,7 +147,7 @@
                         </ul>
                     </div> <!--重点专注-->
                     <!--公告栏-->
-                    <div class="col-md-4 col-sm-4 col-xs-4">
+                    <div class="col-md-4 col-sm-4 col-xs-4 b1">
                         <ul>
                             <c:forEach items="${ggList }" var="news">
 	                         	<li>

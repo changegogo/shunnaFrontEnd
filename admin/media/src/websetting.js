@@ -271,14 +271,14 @@ var WebSetting = function () {
 					field : 'sort',
 					align : 'center',
 					valign : 'middle',
-					title : "位置",
+					title : "排序",
 					editable: {
 	                    type: 'text',
-	                    title: '位置',
+	                    title: '排序',
 	                    mode: 'inline',
 	                    validate: function (v) {
-	                        if (!v) return '位置不能为空';
-	                        if (isNaN(v)) return '位置必须是数字';
+	                        if (!v) return '排序不能为空';
+	                        if (isNaN(v)) return '排序必须是数字';
 	                    }
 	                }
 				},{
@@ -536,14 +536,14 @@ var WebSetting = function () {
 					field : 'sort',
 					align : 'center',
 					valign : 'middle',
-					title : "位置",
+					title : "排序",
 					editable: {
 	                    type: 'text',
-	                    title: '位置',
+	                    title: '排序',
 	                    mode: 'popup',
 	                    validate: function (v) {
-	                        if (!v) return '位置不能为空';
-	                        if (isNaN(v)) return '位置必须是数字';
+	                        if (!v) return '排序不能为空';
+	                        if (isNaN(v)) return '排序必须是数字';
 	                    }
 	                }
 				},{
