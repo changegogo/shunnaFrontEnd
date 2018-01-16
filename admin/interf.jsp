@@ -20,16 +20,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
 
-  <script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"8123",secure:"8124"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script><script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"8123",secure:"8124"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script><script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"8123",secure:"8124"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script></head>
+  <script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"8123",secure:"8124"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script><script>"undefined"==typeof CODE_LIVE&&(!function(e){var t={nonSecure:"8123",secure:"8124"},c={nonSecure:"http://",secure:"https://"},r={nonSecure:"127.0.0.1",secure:"gapdebug.local.genuitec.com"},n="https:"===window.location.protocol?"secure":"nonSecure";script=e.createElement("script"),script.type="text/javascript",script.async=!0,script.src=c[n]+r[n]+":"+t[n]+"/codelive-assets/bundle.js",e.getElementsByTagName("head")[0].appendChild(script)}(document),CODE_LIVE=!0);</script></head>
   
-  <body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-8" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-7" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-7" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp">
+  <body data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-8" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-7" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp">
   	<%
 		Object user = request.getSession().getAttribute("user");
 		if(user == null){
 			response.sendRedirect("/committeewb/admin/login.jsp");
 		}
 	 %>
-  	<h1 data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-8" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-7" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc1-7" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp">后台管理系统接口</h1>
+  	<h1 data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-8" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp" data-genuitec-lp-enabled="false" data-genuitec-file-id="wc2-7" data-genuitec-path="/committeewb/src/main/webapp/admin/interf.jsp">后台管理系统接口</h1>
   	 <h4>登录</h4>
      http://20.14.3.21:8080/committeewb/login<br/>
      登录<br/>
@@ -214,9 +214,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    	新闻列表<br/>
    	参数：currentPage（当前页，从1开始）、newsTypeID（新闻类型ID）、activityID（专题标签id）
    	<hr/>
-   	http://20.14.3.21:8080/committeewb/news/{newsTypeID}/{id}/query(Restful风格)<br/>
+   	http://20.14.3.21:8080/committeewb/news/{activityID}/{newsTypeID}/{id}/query(Restful风格)<br/>
    	查询新闻，同时新闻访问量+1  <br/>
-   	参数：id(新闻id)
+   	参数：id(新闻id)、newsTypeID(新闻类型ID)、activityID(专题标签ID，不限制标签类型时传-1)
    	<hr/>
    	http://20.14.3.21:8080/committeewb/home/1/query(Restful风格)<br/>
    	查询规章制度、工作标准、通讯录、风采录  （查询规章制度）<br/>
