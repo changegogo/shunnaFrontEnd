@@ -1,23 +1,23 @@
 var WebSetting = function () {
     return {
-    		baseurl: "",
-    		slideDownAlert: function(msg){
-    			var self = this;
-    			$(".alert .alertMsg").html(msg);
-    			$(".alert").slideDown();
-    			setTimeout(function(){
-    				self.slideUpAlert();
-    			}, 1500);
-    		},
-    		slideUpAlert: function(){
-    			$(".alert").slideUp();
-    		},
+		baseurl: "",
+		slideDownAlert: function(msg){
+			var self = this;
+			$(".alert .alertMsg").html(msg);
+			$(".alert").slideDown();
+			setTimeout(function(){
+				self.slideUpAlert();
+			}, 1500);
+		},
+		slideUpAlert: function(){
+			$(".alert").slideUp();
+		},
         init: function () {
             this.baseurl = CommonUtils.baseUrl;
             console.log("WebSetting init");
         },
         initEvent: function(){
-        		var self = this;
+        	var self = this;
        	 	$("#addNav").click(function(){
 	        		if($(this).html() === "添加"){
 	        			$(".addNavInput").fadeIn();

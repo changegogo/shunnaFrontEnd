@@ -23,7 +23,7 @@
 		<div class="header">
 			<span id="articleId" style="display: none;"><c:if test="${id!=null }">${id }</c:if><c:if test="${id==null }">-1</c:if></span>
 			<div class="logo">
-				蜀南气矿
+				蜀南气矿团委
 			</div>
 			<div class="title-wrapper">
 				<span class="title">写文章</span>
@@ -60,7 +60,7 @@
 			<div class="newsType-wrapper">
 				<b>新闻类型:</b>
 				<label for="newstype1">
-					<input id="newstype1" name="newstype" type="radio" value="1" checked/>重点专注 <span style="color: #EEEEEE;">|</span> 
+					<input id="newstype1" name="newstype" type="radio" value="1" checked/>重点关注 <span style="color: #EEEEEE;">|</span> 
 				</label>
 				<label for="newstype2">
 					<input id="newstype2" name="newstype" type="radio" value="2" />公告栏 <span style="color: #EEEEEE;">|</span> 
@@ -69,12 +69,12 @@
 					<input id="newstype3" name="newstype" type="radio" value="3" />文件通知 <span style="color: #EEEEEE;">|</span> 
 				</label>
 				<label for="newstype4">
-					<input id="newstype4" name="newstype" type="radio" value="4" />团青快讯 <span style="color: #EEEEEE;">|</span> 
+					<input id="newstype4" name="newstype" type="radio" value="4" />团情快讯 <span style="color: #EEEEEE;">|</span> 
 				</label>
 				<label for="newstype5">
 					<input id="newstype5" name="newstype" type="radio" value="5" />蜀南青语 <span style="color: #EEEEEE;">|</span> 
 				</label>
-				<label for="newstype6">
+				<label style="display: none;" for="newstype6">
 					<input id="newstype6" name="newstype" type="radio" value="6" />专题活动 <span style="color: #EEEEEE;">|</span> 
 				</label>
 				<label for="newstype7">

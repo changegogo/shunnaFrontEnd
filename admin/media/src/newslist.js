@@ -131,7 +131,7 @@ var NewsList = (function(){
 						var val="";
 						switch (row.newsTypeID){
 							case 1:
-								val+='[重点专注]';
+								val+='[重点关注]';
 								break;
 							case 2:
 								val+='[公告栏]';
@@ -140,7 +140,7 @@ var NewsList = (function(){
 								val+='[文件通知]';
 								break;
 							case 4:
-								val+='[团青快讯]';
+								val+='[团情快讯]';
 								break;
 							case 5:
 								val+='[蜀南青语]';
