@@ -58,31 +58,38 @@
 		
 		<div class="edit-wrapper">
 			<div class="newsType-wrapper">
-				<b>新闻类型:</b>
-				<label for="newstype1">
-					<input id="newstype1" name="newstype" type="radio" value="1" checked/>重点关注 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label for="newstype2">
-					<input id="newstype2" name="newstype" type="radio" value="2" />公告栏 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label for="newstype3">
-					<input id="newstype3" name="newstype" type="radio" value="3" />文件通知 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label for="newstype4">
-					<input id="newstype4" name="newstype" type="radio" value="4" />团情快讯 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label for="newstype5">
-					<input id="newstype5" name="newstype" type="radio" value="5" />蜀南青语 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label style="display: none;" for="newstype6">
-					<input id="newstype6" name="newstype" type="radio" value="6" />专题活动 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label for="newstype7">
-					<input id="newstype7" name="newstype" type="radio" value="7" />青春剪影 <span style="color: #EEEEEE;">|</span> 
-				</label>
-				<label for="newstype8">
-					<input id="newstype8" name="newstype" type="radio" value="8" />生活大家谈 
-				</label>
+				<b>新闻类型:</b><br>
+				<div class="label-wrapper label-radio">
+					<label for="newstype1">
+						<input id="newstype1" name="newstype" type="radio" value="1" checked/>重点关注 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label for="newstype2">
+						<input id="newstype2" name="newstype" type="radio" value="2" />公告栏 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label for="newstype3">
+						<input id="newstype3" name="newstype" type="radio" value="3" />文件通知 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label for="newstype4">
+						<input id="newstype4" name="newstype" type="radio" value="4" />团情快讯 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label for="newstype5">
+						<input id="newstype5" name="newstype" type="radio" value="5" />蜀南青语 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label style="display: none;" for="newstype6">
+						<input id="newstype6" name="newstype" type="radio" value="6" />专题活动 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label for="newstype7">
+						<input id="newstype7" name="newstype" type="radio" value="7" />青春剪影 <span style="color: #EEEEEE;">|</span> 
+					</label>
+					<label for="newstype8">
+						<input id="newstype8" name="newstype" type="radio" value="8" />生活大家谈 
+					</label>
+				</div>
+			</div>
+			<div class="special-wrapper">
+				<b>专题标签:</b><br>
+				<div class="label-wrapper label-checkbox">
+				</div>
 			</div>
 			<div class="writeCover-wrapper">
 				<div class="noticeInfo">图片像素宽高比要求16:9</div>

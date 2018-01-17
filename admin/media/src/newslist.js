@@ -219,7 +219,7 @@ var NewsList = (function(){
 						var text = "编辑";
 						if(row.status===0){
 							text = "更新";
-							return ["<a target='_blank' href="+self.baseurl+"/news/"+row.newsTypeID+"/"+row.id+"/query"+" class='btn btn-inverse btn-mini'>查看</a> ",
+							return ["<a target='_blank' href="+self.baseurl+"/news/-1/"+row.newsTypeID+"/"+row.id+"/query"+" class='btn btn-inverse btn-mini'>查看</a> ",
 							"<a target='_blank' href="+self.baseurl+"/news/edit/"+row.id+" class='btn btn-primary btn-mini'>"+text+"</a>"].join("");
 						}
 						return "<a target='_blank' href="+self.baseurl+"/news/edit/"+row.id+" class='btn btn-primary btn-mini'>"+text+"</a>";

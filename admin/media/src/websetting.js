@@ -910,12 +910,12 @@ var WebSetting = function () {
 									url: self.baseurl+"/activity/deleteActivity",
 									async:true,
 									data: {
-										id: row.id
+										ids: row.id
 									},
 									success: function(res){
 										if(res.code === 200){
 											self.slideDownAlert("删除成功！");
-											self.initFriendLinkTable();
+											self.initSpecialtable();
 										}else{
 	                            				self.slideDownAlert(res.msg);
 										}
