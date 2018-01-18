@@ -239,9 +239,14 @@
                             	</c:forEach>
                             </div>
                             <!--向下箭头-->
-                            <div class="down" style="position: absolute;bottom: 0">
-                               <span class="cli iconfont icon-down-darrow"></span>
+                            <div class="cli" style="position: absolute;bottom: 0">
+                               <%--下--%>
+                               <span class="down iconfont icon-down-darrow"></span>
+                                <%--上--%>
+                               <span class="up iconfont icon-down-darrow"></span>
                             </div>
+
+
                         </div>
                     </div><!--专题活动-->
 
