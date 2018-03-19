@@ -143,7 +143,7 @@
 	                         				</c:if>
 	                         				${news.title }
 	                         		</a>
-	                         		<span><fmt:formatDate value="${news.showTime }" pattern="yyyy-MM-dd"/></span>
+	                         		<span><fmt:formatDate value="${news.showTime }" pattern="MM-dd"/></span>
 	                         	</li>
 	                         </c:forEach>
                         </ul>
@@ -162,7 +162,7 @@
 	                         				</c:if>
 	                         				${news.title }
 	                         		</a>
-	                         		<span><fmt:formatDate value="${news.showTime }" pattern="yyyy-MM-dd"/></span>
+	                         		<span><fmt:formatDate value="${news.showTime }" pattern="MM-dd"/></span>
 	                         	</li>
 	                         </c:forEach>
                         </ul>
@@ -192,7 +192,7 @@
 	                         				</c:if>
 	                         				${news.title }
 		                         		</a>
-		                         		<span><fmt:formatDate value="${news.showTime }" pattern="yyyy-MM-dd"/></span>
+		                         		<span><fmt:formatDate value="${news.showTime }" pattern="MM-dd"/></span>
 		                         	</li>
 		                        </c:forEach>
                             </ul>
@@ -218,7 +218,7 @@
 	                         				</c:if>
 		                         			${news.title }
 		                         		</a>
-		                         		<span><fmt:formatDate value="${news.showTime }" pattern="yyyy-MM-dd"/></span>
+		                         		<span><fmt:formatDate value="${news.showTime }" pattern="MM-dd"/></span>
 		                         	</li>
 		                        </c:forEach>
                             </ul>
@@ -244,7 +244,7 @@
 	                         				</c:if>
 		                         			${news.title }
 		                         		</a>
-		                         		<span><fmt:formatDate value="${news.showTime }" pattern="yyyy-MM-dd"/></span>
+		                         		<span><fmt:formatDate value="${news.showTime }" pattern="MM-dd"/></span>
 		                         	</li>
 		                        </c:forEach>
                             </ul>
